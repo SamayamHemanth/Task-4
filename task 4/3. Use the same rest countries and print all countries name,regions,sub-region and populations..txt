@@ -1,0 +1,1033 @@
+Rest Countries:
+//1.setup our http request
+let xhr=new XMLHttpRequest();
+
+//2.open the request
+xhr.open('GET','https://restcountries.com/v3.1/all')
+
+//setup our listener to process the complete request
+xhr.onload=function(){
+    if(xhr.status>=200&& xhr.status<300){
+        //only if request is ok and received the data
+        let data=JSON.parse(this.response);
+        console.log(data);
+
+        for(let i=0;i<data.length;i++){
+            console.log(data[i].name);
+            console.log(data[i].region);
+            console.log(data[i].subregion);
+            console.log(data[i].population);
+        };
+
+}else{
+//run if the request is not ok
+console.log("error");
+}
+}
+
+//send the request
+xhr.send();
+
+Output (country names,regions,sub-regions,populations):
+
+common: 'Guam', official: 'Guam', nativeName: {…}}common: "Guam"nativeName: {cha: {…}, eng: {…}, spa: {…}}official: "Guam"[[Prototype]]: Object
+script.js:82 Oceania
+script.js:83 Micronesia
+script.js:84 168783
+script.js:81 {common: 'Bangladesh', official: "People's Republic of Bangladesh", nativeName: {…}}
+script.js:82 Asia
+script.js:83 Southern Asia
+script.js:84 164689383
+script.js:81 {common: 'Cook Islands', official: 'Cook Islands', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 18100
+script.js:81 {common: 'Nepal', official: 'Federal Democratic Republic of Nepal', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Southern Asia
+script.js:84 29136808
+script.js:81 {common: 'Monaco', official: 'Principality of Monaco', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Western Europe
+script.js:84 39244
+script.js:81 {common: 'Turkey', official: 'Republic of Turkey', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 84339067
+script.js:81 {common: 'Saint Barthélemy', official: 'Collectivity of Saint Barthélemy', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 4255
+script.js:81 {common: 'Jamaica', official: 'Jamaica', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 2961161
+script.js:81 {common: 'Andorra', official: 'Principality of Andorra', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 77265
+script.js:81 {common: 'Libya', official: 'State of Libya', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Northern Africa
+script.js:84 6871287
+script.js:81 {common: 'Jersey', official: 'Bailiwick of Jersey', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 100800
+script.js:81 {common: 'Malta', official: 'Republic of Malta', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 525285
+script.js:81 {common: 'Bolivia', official: 'Plurinational State of Bolivia', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 11673029
+script.js:81 {common: 'Mauritius', official: 'Republic of Mauritius', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 1265740
+script.js:81 {common: 'Puerto Rico', official: 'Commonwealth of Puerto Rico', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 3194034
+script.js:81 {common: 'France', official: 'French Republic', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Western Europe
+script.js:84 67391582
+script.js:81 {common: 'Luxembourg', official: 'Grand Duchy of Luxembourg', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Western Europe
+script.js:84 632275
+script.js:81 {common: 'Kosovo', official: 'Republic of Kosovo', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southeast Europe
+script.js:84 1775378
+script.js:81 {common: 'Madagascar', official: 'Republic of Madagascar', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 27691019
+script.js:81 {common: 'Pakistan', official: 'Islamic Republic of Pakistan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Southern Asia
+script.js:84 220892331
+script.js:81 {common: 'Malawi', official: 'Republic of Malawi', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 19129955
+script.js:81 {common: 'Slovenia', official: 'Republic of Slovenia', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Central Europe
+script.js:84 2100126
+script.js:81 {common: 'Eswatini', official: 'Kingdom of Eswatini', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Southern Africa
+script.js:84 1160164
+script.js:81 {common: 'United States', official: 'United States of America', nativeName: {…}}
+script.js:82 Americas
+script.js:83 North America
+script.js:84 329484123
+script.js:81 {common: 'Kiribati', official: 'Independent and Sovereign Republic of Kiribati', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Micronesia
+script.js:84 119446
+script.js:81 {common: 'Azerbaijan', official: 'Republic of Azerbaijan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 10110116
+script.js:81 {common: 'Zambia', official: 'Republic of Zambia', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 18383956
+script.js:81 {common: 'Kenya', official: 'Republic of Kenya', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 53771300
+script.js:81 {common: 'Kuwait', official: 'State of Kuwait', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 4270563
+script.js:81 {common: 'Kazakhstan', official: 'Republic of Kazakhstan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Central Asia
+script.js:84 18754440
+script.js:81 {common: 'Latvia', official: 'Republic of Latvia', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 1901548
+script.js:81 {common: 'Sierra Leone', official: 'Republic of Sierra Leone', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 7976985
+script.js:81 {common: 'Saint Kitts and Nevis', official: 'Federation of Saint Christopher and Nevis', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 53192
+script.js:81 {common: 'Belize', official: 'Belize', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Central America
+script.js:84 397621
+script.js:81 {common: 'Martinique', official: 'Martinique', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 378243
+script.js:81 {common: 'Romania', official: 'Romania', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southeast Europe
+script.js:84 19286123
+script.js:81 {common: 'British Virgin Islands', official: 'Virgin Islands', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 30237
+script.js:81 {common: 'New Zealand', official: 'New Zealand', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Australia and New Zealand
+script.js:84 5084300
+script.js:81 {common: 'Brazil', official: 'Federative Republic of Brazil', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 212559409
+script.js:81 {common: 'Central African Republic', official: 'Central African Republic', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 4829764
+script.js:81 {common: 'Marshall Islands', official: 'Republic of the Marshall Islands', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Micronesia
+script.js:84 59194
+script.js:81 {common: 'French Southern and Antarctic Lands', official: 'Territory of the French Southern and Antarctic Lands', nativeName: {…}}
+script.js:82 Antarctic
+script.js:83 undefined
+script.js:84 400
+script.js:81 {common: 'Wallis and Futuna', official: 'Territory of the Wallis and Futuna Islands', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 11750
+script.js:81 {common: 'Russia', official: 'Russian Federation', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Eastern Europe
+script.js:84 144104080
+script.js:81 {common: 'Panama', official: 'Republic of Panama', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Central America
+script.js:84 4314768
+script.js:81 {common: 'Brunei', official: 'Nation of Brunei, Abode of Peace', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 437483
+script.js:81 {common: 'Gibraltar', official: 'Gibraltar', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 33691
+script.js:81 {common: 'Malaysia', official: 'Malaysia', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 32365998
+script.js:81 {common: 'Ecuador', official: 'Republic of Ecuador', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 17643060
+script.js:81 {common: 'Morocco', official: 'Kingdom of Morocco', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Northern Africa
+script.js:84 36910558
+script.js:81 {common: 'Saint Vincent and the Grenadines', official: 'Saint Vincent and the Grenadines', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 110947
+script.js:81 {common: 'Cuba', official: 'Republic of Cuba', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 11326616
+script.js:81 {common: 'Liechtenstein', official: 'Principality of Liechtenstein', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Western Europe
+script.js:84 38137
+script.js:81 {common: 'Bahamas', official: 'Commonwealth of the Bahamas', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 393248
+script.js:81 {common: 'Canada', official: 'Canada', nativeName: {…}}
+script.js:82 Americas
+script.js:83 North America
+script.js:84 38005238
+script.js:81 {common: 'Fiji', official: 'Republic of Fiji', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Melanesia
+script.js:84 896444
+script.js:81 {common: 'Saudi Arabia', official: 'Kingdom of Saudi Arabia', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 34813867
+script.js:81 {common: 'Cayman Islands', official: 'Cayman Islands', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 65720
+script.js:81 {common: 'Lithuania', official: 'Republic of Lithuania', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 2794700
+script.js:81 {common: 'Caribbean Netherlands', official: 'Bonaire, Sint Eustatius and Saba', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 25987
+script.js:81 {common: 'Ireland', official: 'Republic of Ireland', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 4994724
+script.js:81 {common: 'Chile', official: 'Republic of Chile', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 19116209
+script.js:81 {common: 'Turkmenistan', official: 'Turkmenistan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Central Asia
+script.js:84 6031187
+script.js:81 {common: 'Myanmar', official: 'Republic of the Union of Myanmar', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 54409794
+script.js:81 {common: 'Yemen', official: 'Republic of Yemen', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 29825968
+script.js:81 {common: 'Saint Helena, Ascension and Tristan da Cunha', official: 'Saint Helena, Ascension and Tristan da Cunha', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 53192
+script.js:81 {common: 'São Tomé and Príncipe', official: 'Democratic Republic of São Tomé and Príncipe', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 219161
+script.js:81 {common: 'Guatemala', official: 'Republic of Guatemala', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Central America
+script.js:84 16858333
+script.js:81 {common: 'Singapore', official: 'Republic of Singapore', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 5685807
+script.js:81 {common: 'Venezuela', official: 'Bolivarian Republic of Venezuela', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 28435943
+script.js:81 {common: 'Comoros', official: 'Union of the Comoros', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 869595
+script.js:81 {common: 'Western Sahara', official: 'Sahrawi Arab Democratic Republic', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Northern Africa
+script.js:84 510713
+script.js:81 {common: 'Namibia', official: 'Republic of Namibia', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Southern Africa
+script.js:84 2540916
+script.js:81 {common: 'Timor-Leste', official: 'Democratic Republic of Timor-Leste', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 1318442
+script.js:81 {common: 'Bosnia and Herzegovina', official: 'Bosnia and Herzegovina', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southeast Europe
+script.js:84 3280815
+script.js:81 {common: 'Cape Verde', official: 'Republic of Cabo Verde', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 555988
+script.js:81 {common: 'Hong Kong', official: "Hong Kong Special Administrative Region of the People's Republic of China", nativeName: {…}}
+script.js:82 Asia
+script.js:83 Eastern Asia
+script.js:84 7500700
+script.js:81 {common: 'Moldova', official: 'Republic of Moldova', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Eastern Europe
+script.js:84 2617820
+script.js:81 {common: 'Philippines', official: 'Republic of the Philippines', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 109581085
+script.js:81 {common: 'Guadeloupe', official: 'Guadeloupe', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 400132
+script.js:81 {common: 'Zimbabwe', official: 'Republic of Zimbabwe', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Southern Africa
+script.js:84 14862927
+script.js:81 {common: 'Grenada', official: 'Grenada', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 112519
+script.js:81 {common: 'Isle of Man', official: 'Isle of Man', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 85032
+script.js:81 {common: 'Tanzania', official: 'United Republic of Tanzania', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 59734213
+script.js:81 {common: 'Seychelles', official: 'Republic of Seychelles', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 98462
+script.js:81 {common: 'Netherlands', official: 'Kingdom of the Netherlands', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Western Europe
+script.js:84 16655799
+script.js:81 {common: 'Paraguay', official: 'Republic of Paraguay', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 7132530
+script.js:81 {common: 'San Marino', official: 'Republic of San Marino', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 33938
+script.js:81 {common: 'Bulgaria', official: 'Republic of Bulgaria', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southeast Europe
+script.js:84 6927288
+script.js:81 {common: 'United States Virgin Islands', official: 'Virgin Islands of the United States', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 106290
+script.js:81 {common: 'Tunisia', official: 'Tunisian Republic', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Northern Africa
+script.js:84 11818618
+script.js:81 {common: 'Iceland', official: 'Iceland', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 366425
+script.js:81 {common: 'DR Congo', official: 'Democratic Republic of the Congo', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 108407721
+script.js:81 {common: 'Aruba', official: 'Aruba', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 106766
+script.js:81 {common: 'Indonesia', official: 'Republic of Indonesia', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 273523621
+script.js:81 {common: 'El Salvador', official: 'Republic of El Salvador', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Central America
+script.js:84 6486201
+script.js:81 {common: 'Slovakia', official: 'Slovak Republic', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Central Europe
+script.js:84 5458827
+script.js:81 {common: 'Sweden', official: 'Kingdom of Sweden', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 10353442
+script.js:81 {common: 'Laos', official: "Lao People's Democratic Republic", nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 7275556
+script.js:81 {common: 'Gambia', official: 'Republic of the Gambia', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 2416664
+script.js:81 {common: 'Israel', official: 'State of Israel', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 9216900
+script.js:81 {common: 'Svalbard and Jan Mayen', official: 'Svalbard og Jan Mayen', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 2562
+script.js:81 {common: 'Montenegro', official: 'Montenegro', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southeast Europe
+script.js:84 621718
+script.js:81 {common: 'Somalia', official: 'Federal Republic of Somalia', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 15893219
+script.js:81 {common: 'Réunion', official: 'Réunion Island', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 840974
+script.js:81 {common: 'Sri Lanka', official: 'Democratic Socialist Republic of Sri Lanka', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Southern Asia
+script.js:84 21919000
+script.js:81 {common: 'Germany', official: 'Federal Republic of Germany', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Western Europe
+script.js:84 83240525
+script.js:81 {common: 'Serbia', official: 'Republic of Serbia', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southeast Europe
+script.js:84 6908224
+script.js:81 {common: 'Macau', official: "Macao Special Administrative Region of the People's Republic of China", nativeName: {…}}
+script.js:82 Asia
+script.js:83 Eastern Asia
+script.js:84 649342
+script.js:81 {common: 'Guyana', official: 'Co-operative Republic of Guyana', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 786559
+script.js:81 {common: 'Suriname', official: 'Republic of Suriname', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 586634
+script.js:81 {common: 'Lesotho', official: 'Kingdom of Lesotho', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Southern Africa
+script.js:84 2142252
+script.js:81 {common: 'Faroe Islands', official: 'Faroe Islands', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 48865
+script.js:81 {common: 'Honduras', official: 'Republic of Honduras', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Central America
+script.js:84 9904608
+script.js:81 {common: 'Palestine', official: 'State of Palestine', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 4803269
+script.js:81 {common: 'Papua New Guinea', official: 'Independent State of Papua New Guinea', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Melanesia
+script.js:84 8947027
+script.js:81 {common: 'Egypt', official: 'Arab Republic of Egypt', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Northern Africa
+script.js:84 102334403
+script.js:81 {common: 'Spain', official: 'Kingdom of Spain', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 47351567
+script.js:81 {common: 'Eritrea', official: 'State of Eritrea', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 5352000
+script.js:81 {common: 'Mozambique', official: 'Republic of Mozambique', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 31255435
+script.js:81 {common: 'North Korea', official: "Democratic People's Republic of Korea", nativeName: {…}}
+script.js:82 Asia
+script.js:83 Eastern Asia
+script.js:84 25778815
+script.js:81 {common: 'Senegal', official: 'Republic of Senegal', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 16743930
+script.js:81 {common: 'Niue', official: 'Niue', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 1470
+script.js:81 {common: 'Micronesia', official: 'Federated States of Micronesia', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Micronesia
+script.js:84 115021
+script.js:81 {common: 'Cambodia', official: 'Kingdom of Cambodia', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 16718971
+script.js:81 {common: 'Djibouti', official: 'Republic of Djibouti', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 988002
+script.js:81 {common: 'Ghana', official: 'Republic of Ghana', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 31072945
+script.js:81 {common: 'Bouvet Island', official: 'Bouvet Island', nativeName: {…}}
+script.js:82 Antarctic
+script.js:83 undefined
+script.js:84 0
+script.js:81 {common: 'Belarus', official: 'Republic of Belarus', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Eastern Europe
+script.js:84 9398861
+script.js:81 {common: 'Benin', official: 'Republic of Benin', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 12123198
+script.js:81 {common: 'Cocos (Keeling) Islands', official: 'Territory of the Cocos (Keeling) Islands', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Australia and New Zealand
+script.js:84 544
+script.js:81 {common: 'United Kingdom', official: 'United Kingdom of Great Britain and Northern Ireland', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 67215293
+script.js:81 {common: 'Åland Islands', official: 'Åland Islands', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 29458
+script.js:81 {common: 'Burkina Faso', official: 'Burkina Faso', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 20903278
+script.js:81 {common: 'Solomon Islands', official: 'Solomon Islands', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Melanesia
+script.js:84 686878
+script.js:81 {common: 'Falkland Islands', official: 'Falkland Islands', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 2563
+script.js:81 {common: 'Guernsey', official: 'Bailiwick of Guernsey', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 62999
+script.js:81 {common: 'Costa Rica', official: 'Republic of Costa Rica', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Central America
+script.js:84 5094114
+script.js:81 {common: 'Albania', official: 'Republic of Albania', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southeast Europe
+script.js:84 2837743
+script.js:81 {common: 'Christmas Island', official: 'Territory of Christmas Island', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Australia and New Zealand
+script.js:84 2072
+script.js:81 {common: 'Greece', official: 'Hellenic Republic', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 10715549
+script.js:81 {common: 'Ukraine', official: 'Ukraine', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Eastern Europe
+script.js:84 44134693
+script.js:81 {common: 'Greenland', official: 'Greenland', nativeName: {…}}
+script.js:82 Americas
+script.js:83 North America
+script.js:84 56367
+script.js:81 {common: 'North Macedonia', official: 'Republic of North Macedonia', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southeast Europe
+script.js:84 2077132
+script.js:81 {common: 'Ivory Coast', official: "Republic of Côte d'Ivoire", nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 26378275
+script.js:81 {common: 'Syria', official: 'Syrian Arab Republic', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 17500657
+script.js:81 {common: 'Czechia', official: 'Czech Republic', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Central Europe
+script.js:84 10698896
+script.js:81 {common: 'Botswana', official: 'Republic of Botswana', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Southern Africa
+script.js:84 2351625
+script.js:81 {common: 'American Samoa', official: 'American Samoa', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 55197
+script.js:81 {common: 'Mexico', official: 'United Mexican States', nativeName: {…}}
+script.js:82 Americas
+script.js:83 North America
+script.js:84 128932753
+script.js:81 {common: 'Austria', official: 'Republic of Austria', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Central Europe
+script.js:84 8917205
+script.js:81 {common: 'Bermuda', official: 'Bermuda', nativeName: {…}}
+script.js:82 Americas
+script.js:83 North America
+script.js:84 63903
+script.js:81 {common: 'Bahrain', official: 'Kingdom of Bahrain', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 1701583
+script.js:81 {common: 'Nauru', official: 'Republic of Nauru', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Micronesia
+script.js:84 10834
+script.js:81 {common: 'Niger', official: 'Republic of Niger', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 24206636
+script.js:81 {common: 'Angola', official: 'Republic of Angola', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 32866268
+script.js:81 {common: 'Antigua and Barbuda', official: 'Antigua and Barbuda', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 97928
+script.js:81 {common: 'Montserrat', official: 'Montserrat', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 4922
+script.js:81 {common: 'South Korea', official: 'Republic of Korea', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Eastern Asia
+script.js:84 51780579
+script.js:81 {common: 'Taiwan', official: 'Republic of China (Taiwan)', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Eastern Asia
+script.js:84 23503349
+script.js:81 {common: 'Barbados', official: 'Barbados', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 287371
+script.js:81 {common: 'Curaçao', official: 'Country of Curaçao', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 155014
+script.js:81 {common: 'Maldives', official: 'Republic of the Maldives', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Southern Asia
+script.js:84 540542
+script.js:81 {common: 'Heard Island and McDonald Islands', official: 'Heard Island and McDonald Islands', nativeName: {…}}
+script.js:82 Antarctic
+script.js:83 undefined
+script.js:84 0
+script.js:81 {common: 'Dominica', official: 'Commonwealth of Dominica', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 71991
+script.js:81 {common: 'Mauritania', official: 'Islamic Republic of Mauritania', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 4649660
+script.js:81 {common: 'Georgia', official: 'Georgia', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 3714000
+script.js:81 {common: 'Guinea', official: 'Republic of Guinea', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 13132792
+script.js:81 {common: 'Liberia', official: 'Republic of Liberia', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 5057677
+script.js:81 {common: 'Guinea-Bissau', official: 'Republic of Guinea-Bissau', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 1967998
+script.js:81 {common: 'Switzerland', official: 'Swiss Confederation', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Western Europe
+script.js:84 8654622
+script.js:81 {common: 'Cyprus', official: 'Republic of Cyprus', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 1207361
+script.js:81 {common: 'British Indian Ocean Territory', official: 'British Indian Ocean Territory', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 3000
+script.js:81 {common: 'Finland', official: 'Republic of Finland', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 5530719
+script.js:81 {common: 'Belgium', official: 'Kingdom of Belgium', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Western Europe
+script.js:84 11555997
+script.js:81 {common: 'United Arab Emirates', official: 'United Arab Emirates', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 9890400
+script.js:81 {common: 'Mali', official: 'Republic of Mali', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 20250834
+script.js:81 {common: 'Chad', official: 'Republic of Chad', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 16425859
+script.js:81 {common: 'Equatorial Guinea', official: 'Republic of Equatorial Guinea', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 1402985
+script.js:81 {common: 'Vatican City', official: 'Vatican City State', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 451
+script.js:81 {common: 'Iraq', official: 'Republic of Iraq', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 40222503
+script.js:81 {common: 'Tokelau', official: 'Tokelau', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 1411
+script.js:81 {common: 'Tonga', official: 'Kingdom of Tonga', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 105697
+script.js:81 {common: 'Northern Mariana Islands', official: 'Commonwealth of the Northern Mariana Islands', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Micronesia
+script.js:84 57557
+script.js:81 {common: 'Qatar', official: 'State of Qatar', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 2881060
+script.js:81 {common: 'Uruguay', official: 'Oriental Republic of Uruguay', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 3473727
+script.js:81 {common: 'India', official: 'Republic of India', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Southern Asia
+script.js:84 1380004385
+script.js:81 {common: 'Norfolk Island', official: 'Territory of Norfolk Island', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Australia and New Zealand
+script.js:84 2302
+script.js:81 {common: 'Oman', official: 'Sultanate of Oman', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 5106622
+script.js:81 {common: 'Colombia', official: 'Republic of Colombia', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 50882884
+script.js:81 {common: 'Cameroon', official: 'Republic of Cameroon', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 26545864
+script.js:81 {common: 'Ethiopia', official: 'Federal Democratic Republic of Ethiopia', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 114963583
+script.js:81 {common: 'Sudan', official: 'Republic of the Sudan', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Northern Africa
+script.js:84 43849269
+script.js:81 {common: 'Gabon', official: 'Gabonese Republic', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 2225728
+script.js:81 {common: 'Argentina', official: 'Argentine Republic', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 45376763
+script.js:81 {common: 'Japan', official: 'Japan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Eastern Asia
+script.js:84 125836021
+script.js:81 {common: 'Hungary', official: 'Hungary', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Central Europe
+script.js:84 9749763
+script.js:81 {common: 'Croatia', official: 'Republic of Croatia', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southeast Europe
+script.js:84 4047200
+script.js:81 {common: 'Kyrgyzstan', official: 'Kyrgyz Republic', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Central Asia
+script.js:84 6591600
+script.js:81 {common: 'Portugal', official: 'Portuguese Republic', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 10305564
+script.js:81 {common: 'Vietnam', official: 'Socialist Republic of Vietnam', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 97338583
+script.js:81 {common: 'Norway', official: 'Kingdom of Norway', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 5379475
+script.js:81 {common: 'Italy', official: 'Italian Republic', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Southern Europe
+script.js:84 59554023
+script.js:81 {common: 'Sint Maarten', official: 'Sint Maarten', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 40812
+script.js:81 {common: 'Saint Martin', official: 'Saint Martin', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 38659
+script.js:81 {common: 'Jordan', official: 'Hashemite Kingdom of Jordan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 10203140
+script.js:81 {common: 'French Polynesia', official: 'French Polynesia', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 280904
+script.js:81 {common: 'Rwanda', official: 'Republic of Rwanda', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 12952209
+script.js:81 {common: 'Thailand', official: 'Kingdom of Thailand', nativeName: {…}}
+script.js:82 Asia
+script.js:83 South-Eastern Asia
+script.js:84 69799978
+script.js:81 {common: 'Denmark', official: 'Kingdom of Denmark', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 5831404
+script.js:81 {common: 'Tuvalu', official: 'Tuvalu', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 11792
+script.js:81 {common: 'Pitcairn Islands', official: 'Pitcairn Group of Islands', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 56
+script.js:81 {common: 'Uganda', official: 'Republic of Uganda', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 45741000
+script.js:81 {common: 'Togo', official: 'Togolese Republic', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 8278737
+script.js:81 {common: 'Tajikistan', official: 'Republic of Tajikistan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Central Asia
+script.js:84 9537642
+script.js:81 {common: 'French Guiana', official: 'Guiana', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 254541
+script.js:81 {common: 'Saint Lucia', official: 'Saint Lucia', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 183629
+script.js:81 {common: 'South Africa', official: 'Republic of South Africa', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Southern Africa
+script.js:84 59308690
+script.js:81 {common: 'Armenia', official: 'Republic of Armenia', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 2963234
+script.js:81 {common: 'Nigeria', official: 'Federal Republic of Nigeria', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Western Africa
+script.js:84 206139587
+script.js:81 {common: 'South Sudan', official: 'Republic of South Sudan', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 11193729
+script.js:81 {common: 'Afghanistan', official: 'Islamic Republic of Afghanistan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Southern Asia
+script.js:84 40218234
+script.js:81 {common: 'Poland', official: 'Republic of Poland', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Central Europe
+script.js:84 37950802
+script.js:81 {common: 'Antarctica', official: 'Antarctica'}
+script.js:82 Antarctic
+script.js:83 undefined
+script.js:84 1000
+script.js:81 {common: 'Lebanon', official: 'Lebanese Republic', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Western Asia
+script.js:84 6825442
+script.js:81 {common: 'Palau', official: 'Republic of Palau', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Micronesia
+script.js:84 18092
+script.js:81 {common: 'New Caledonia', official: 'New Caledonia', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Melanesia
+script.js:84 271960
+script.js:81 {common: 'Burundi', official: 'Republic of Burundi', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 11890781
+script.js:81 {common: 'Algeria', official: "People's Democratic Republic of Algeria", nativeName: {…}}
+script.js:82 Africa
+script.js:83 Northern Africa
+script.js:84 44700000
+script.js:81 {common: 'United States Minor Outlying Islands', official: 'United States Minor Outlying Islands', nativeName: {…}}
+script.js:82 Americas
+script.js:83 North America
+script.js:84 300
+script.js:81 {common: 'Peru', official: 'Republic of Peru', nativeName: {…}}
+script.js:82 Americas
+script.js:83 South America
+script.js:84 32971846
+script.js:81 {common: 'Estonia', official: 'Republic of Estonia', nativeName: {…}}
+script.js:82 Europe
+script.js:83 Northern Europe
+script.js:84 1331057
+script.js:81 {common: 'South Georgia', official: 'South Georgia and the South Sandwich Islands', nativeName: {…}}
+script.js:82 Antarctic
+script.js:83 undefined
+script.js:84 30
+script.js:81 {common: 'Vanuatu', official: 'Republic of Vanuatu', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Melanesia
+script.js:84 307150
+script.js:81 {common: 'Iran', official: 'Islamic Republic of Iran', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Southern Asia
+script.js:84 83992953
+script.js:81 {common: 'China', official: "People's Republic of China", nativeName: {…}}
+script.js:82 Asia
+script.js:83 Eastern Asia
+script.js:84 1402112000
+script.js:81 {common: 'Republic of the Congo', official: 'Republic of the Congo', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Middle Africa
+script.js:84 5657000
+script.js:81 {common: 'Australia', official: 'Commonwealth of Australia', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Australia and New Zealand
+script.js:84 25687041
+script.js:81 {common: 'Turks and Caicos Islands', official: 'Turks and Caicos Islands', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 38718
+script.js:81 {common: 'Trinidad and Tobago', official: 'Republic of Trinidad and Tobago', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 1399491
+script.js:81 {common: 'Anguilla', official: 'Anguilla', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 13452
+script.js:81 {common: 'Haiti', official: 'Republic of Haiti', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 11402533
+script.js:81 {common: 'Uzbekistan', official: 'Republic of Uzbekistan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Central Asia
+script.js:84 34232050
+script.js:81 {common: 'Dominican Republic', official: 'Dominican Republic', nativeName: {…}}
+script.js:82 Americas
+script.js:83 Caribbean
+script.js:84 10847904
+script.js:81 {common: 'Mayotte', official: 'Department of Mayotte', nativeName: {…}}
+script.js:82 Africa
+script.js:83 Eastern Africa
+script.js:84 226915
+script.js:81 {common: 'Mongolia', official: 'Mongolia', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Eastern Asia
+script.js:84 3278292
+script.js:81 {common: 'Saint Pierre and Miquelon', official: 'Saint Pierre and Miquelon', nativeName: {…}}
+script.js:82 Americas
+script.js:83 North America
+script.js:84 6069
+script.js:81 {common: 'Samoa', official: 'Independent State of Samoa', nativeName: {…}}
+script.js:82 Oceania
+script.js:83 Polynesia
+script.js:84 198410
+script.js:81 {common: 'Nicaragua', official: 'Republic of Nicaragua', nativeName: {…}}common: "Nicaragua"nativeName: {spa: {…}}official: "Republic of Nicaragua"[[Prototype]]: Object
+script.js:82 Americas
+script.js:83 Central America
+script.js:84 6624554
+script.js:81 {common: 'Bhutan', official: 'Kingdom of Bhutan', nativeName: {…}}
+script.js:82 Asia
+script.js:83 Southern Asia
+script.js:84 771612
+
